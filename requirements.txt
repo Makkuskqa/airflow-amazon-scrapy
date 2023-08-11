@@ -1,0 +1,7 @@
+scrapy
+scrapeops-scrapy
+apache-airflow-providers-postgres
+apache-airflow
+apache-airflow[cncf.kubernetes]
+pandas
+psycopg2

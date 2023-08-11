@@ -1,0 +1,253 @@
+2023-08-11 04:41:54,544 INFO - Starting the scheduler
+2023-08-11 04:41:54,545 INFO - Processing each file at most -1 times
+2023-08-11 04:41:54,607 INFO - Launched DagFileProcessorManager with pid: 1765
+2023-08-11 04:41:54,609 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 04:41:54,636 INFO - Configured default timezone Timezone('UTC')
+2023-08-11 04:46:58,073 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 04:52:01,934 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 04:57:05,518 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:02:06,867 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:07:08,813 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:12:13,633 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:17:15,899 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:22:19,359 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:27:20,150 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:47:46,258 ERROR - Exception when executing SchedulerJob._run_scheduler_loop
+Traceback (most recent call last):
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.DatabaseError: could not receive data from server: Connection timed out
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 835, in _execute
+    self._run_scheduler_loop()
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 969, in _run_scheduler_loop
+    num_queued_tis = self._do_scheduling(session)
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 1045, in _do_scheduling
+    self._start_queued_dagruns(session)
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 1307, in _start_queued_dagruns
+    dag_runs: Collection[DagRun] = self._get_next_dagruns_to_examine(DagRunState.QUEUED, session).all()
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2773, in all
+    return self._iter().all()
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/wsl-ubuntu-venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (psycopg2.DatabaseError) could not receive data from server: Connection timed out
+
+[SQL: SELECT dag_run.state AS dag_run_state, dag_run.id AS dag_run_id, dag_run.dag_id AS dag_run_dag_id, dag_run.queued_at AS dag_run_queued_at, dag_run.execution_date AS dag_run_execution_date, dag_run.start_date AS dag_run_start_date, dag_run.end_date AS dag_run_end_date, dag_run.run_id AS dag_run_run_id, dag_run.creating_job_id AS dag_run_creating_job_id, dag_run.external_trigger AS dag_run_external_trigger, dag_run.run_type AS dag_run_run_type, dag_run.conf AS dag_run_conf, dag_run.data_interval_start AS dag_run_data_interval_start, dag_run.data_interval_end AS dag_run_data_interval_end, dag_run.last_scheduling_decision AS dag_run_last_scheduling_decision, dag_run.dag_hash AS dag_run_dag_hash, dag_run.log_template_id AS dag_run_log_template_id, dag_run.updated_at AS dag_run_updated_at 
+FROM dag_run JOIN dag ON dag.dag_id = dag_run.dag_id LEFT OUTER JOIN (SELECT dag_run.dag_id AS dag_id, count(dag_run.state) AS num_running 
+FROM dag_run 
+WHERE dag_run.state = %(state_1)s GROUP BY dag_run.dag_id) AS anon_1 ON anon_1.dag_id = dag_run.dag_id 
+WHERE dag_run.state = %(state_2)s AND dag_run.run_type != %(run_type_1)s AND dag.is_paused = false AND dag.is_active = true AND coalesce(anon_1.num_running, %(coalesce_1)s) < dag.max_active_runs AND dag_run.execution_date <= now() ORDER BY dag_run.last_scheduling_decision NULLS FIRST, dag_run.execution_date 
+ LIMIT %(param_1)s FOR UPDATE OF dag_run SKIP LOCKED]
+[parameters: {'state_1': <DagRunState.RUNNING: 'running'>, 'state_2': <DagRunState.QUEUED: 'queued'>, 'run_type_1': <DagRunType.BACKFILL_JOB: 'backfill'>, 'coalesce_1': 0, 'param_1': 20}]
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2023-08-11 05:47:46,415 INFO - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.
+2023-08-11 05:47:46,570 INFO - Sending Signals.SIGTERM to group 1765. PIDs of all processes in the group: []
+2023-08-11 05:47:46,572 INFO - Sending the signal Signals.SIGTERM to group 1765
+2023-08-11 05:47:46,573 INFO - Sending the signal Signals.SIGTERM to process 1765 as process group is missing.
+2023-08-11 05:47:46,575 INFO - Exited execute loop
+2023-08-11 05:52:08,575 INFO - Exiting gracefully upon receiving signal 15
+2023-08-11 05:52:08,579 INFO - Sending Signals.SIGTERM to group 1765. PIDs of all processes in the group: []
+2023-08-11 05:52:08,581 INFO - Sending the signal Signals.SIGTERM to group 1765
+2023-08-11 05:52:08,582 INFO - Sending the signal Signals.SIGTERM to process 1765 as process group is missing.
+2023-08-11 05:54:31,896 INFO - Starting the scheduler
+2023-08-11 05:54:31,898 INFO - Processing each file at most -1 times
+2023-08-11 05:54:32,136 INFO - Launched DagFileProcessorManager with pid: 2387
+2023-08-11 05:54:32,141 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 05:54:32,205 INFO - Configured default timezone Timezone('UTC')
+2023-08-11 05:59:34,894 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:04:40,087 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:08:41,266 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:00:00+00:00, run_after=2023-08-11T13:10:00+00:00
+2023-08-11 06:08:46,162 INFO - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T12:50:00+00:00 [scheduled]>
+2023-08-11 06:08:46,164 INFO - DAG scrapy_spider has 0/16 running and queued tasks
+2023-08-11 06:08:46,165 INFO - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T12:50:00+00:00 [scheduled]>
+2023-08-11 06:08:46,323 INFO - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T12:50:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-08-11 06:08:46,325 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T12:50:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:08:46,484 INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T12:50:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:08:49,993 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:10:00+00:00, run_after=2023-08-11T13:20:00+00:00
+2023-08-11 06:09:02,384 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:20:00+00:00, run_after=2023-08-11T13:30:00+00:00
+2023-08-11 06:09:04,507 ERROR - Execution date is in future: 2023-08-11 13:10:00+00:00
+2023-08-11 06:08:47,837 INFO - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py
+2023-08-11 06:09:13,836 INFO - Running <TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T12:50:00+00:00 [queued]> on host VivoADMIN.
+2023-08-11 06:09:15,041 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:30:00+00:00, run_after=2023-08-11T13:40:00+00:00
+2023-08-11 06:09:17,166 ERROR - Execution date is in future: 2023-08-11 13:10:00+00:00
+2023-08-11 06:09:17,475 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:09:28,829 ERROR - Execution date is in future: 2023-08-11 13:10:00+00:00
+2023-08-11 06:09:29,141 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:09:38,871 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:40:00+00:00, run_after=2023-08-11T13:50:00+00:00
+2023-08-11 06:09:41,005 ERROR - Execution date is in future: 2023-08-11 13:10:00+00:00
+2023-08-11 06:09:41,313 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:09:41,622 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:09:48,948 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:09:52,920 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:50:00+00:00, run_after=2023-08-11T14:00:00+00:00
+2023-08-11 06:09:55,055 ERROR - Execution date is in future: 2023-08-11 13:10:00+00:00
+2023-08-11 06:09:55,362 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:09:55,669 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:09:55,977 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:10:08,716 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:10:09,021 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:10:09,327 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:10:21,687 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:10:21,994 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:10:22,303 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:10:35,067 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:10:35,372 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:10:35,678 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:10:47,658 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:10:47,965 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:10:48,271 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:10:48,882 INFO - Marking run <DagRun scrapy_spider @ 2023-08-11 12:50:00+00:00: scheduled__2023-08-11T12:50:00+00:00, state:running, queued_at: 2023-08-11 13:08:40.797638+00:00. externally triggered: False> successful
+2023-08-11 06:10:48,885 INFO - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 12:50:00+00:00, run_id=scheduled__2023-08-11T12:50:00+00:00, run_start_date=2023-08-11 13:08:42.182739+00:00, run_end_date=2023-08-11 13:10:48.885171+00:00, run_duration=126.702432, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-08-11 12:50:00+00:00, data_interval_end=2023-08-11 13:00:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15
+2023-08-11 06:10:49,193 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:00:00+00:00, run_after=2023-08-11T13:10:00+00:00
+2023-08-11 06:10:54,675 INFO - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:00:00+00:00 [scheduled]>
+2023-08-11 06:10:54,677 INFO - DAG scrapy_spider has 0/16 running and queued tasks
+2023-08-11 06:10:54,679 INFO - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:00:00+00:00 [scheduled]>
+2023-08-11 06:10:54,833 INFO - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-08-11 06:10:54,835 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:10:54,990 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T12:50:00+00:00', try_number=1, map_index=-1)
+2023-08-11 06:10:54,990 INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:10:55,602 INFO - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=scheduled__2023-08-11T12:50:00+00:00, map_index=-1, run_start_date=2023-08-11 13:09:21.401904+00:00, run_end_date=2023-08-11 13:10:36.778685+00:00, run_duration=75.376781, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:08:46.167384+00:00, queued_by_job_id=2, pid=2995
+2023-08-11 06:11:01,643 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:11:01,948 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:11:02,253 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:11:13,109 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:11:13,413 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:11:13,719 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:10:56,324 INFO - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py
+2023-08-11 06:11:20,809 INFO - Running <TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:00:00+00:00 [queued]> on host VivoADMIN.
+2023-08-11 06:11:26,422 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:11:26,728 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:11:27,033 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:11:37,865 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:11:38,171 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:11:38,478 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:11:49,978 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:11:50,286 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:11:50,595 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:12:01,500 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:12:01,806 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:12:02,113 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:12:13,629 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:12:13,939 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:12:14,247 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:12:24,227 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:12:24,533 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:12:24,843 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:12:25,456 INFO - Marking run <DagRun scrapy_spider @ 2023-08-11 13:00:00+00:00: scheduled__2023-08-11T13:00:00+00:00, state:running, queued_at: 2023-08-11 13:08:49.522338+00:00. externally triggered: False> successful
+2023-08-11 06:12:25,459 INFO - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 13:00:00+00:00, run_id=scheduled__2023-08-11T13:00:00+00:00, run_start_date=2023-08-11 13:08:51.056620+00:00, run_end_date=2023-08-11 13:12:25.459062+00:00, run_duration=214.402442, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-08-11 13:00:00+00:00, data_interval_end=2023-08-11 13:10:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15
+2023-08-11 06:12:25,768 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:10:00+00:00, run_after=2023-08-11T13:20:00+00:00
+2023-08-11 06:12:30,192 INFO - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider manual__2023-08-11T13:08:30.743812+00:00 [scheduled]>
+2023-08-11 06:12:30,194 INFO - DAG scrapy_spider has 0/16 running and queued tasks
+2023-08-11 06:12:30,196 INFO - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider manual__2023-08-11T13:08:30.743812+00:00 [scheduled]>
+2023-08-11 06:12:30,350 INFO - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='manual__2023-08-11T13:08:30.743812+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-08-11 06:12:30,352 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'manual__2023-08-11T13:08:30.743812+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:12:30,508 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:00:00+00:00', try_number=1, map_index=-1)
+2023-08-11 06:12:30,508 INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'manual__2023-08-11T13:08:30.743812+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:12:31,118 INFO - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=scheduled__2023-08-11T13:00:00+00:00, map_index=-1, run_start_date=2023-08-11 13:11:28.685605+00:00, run_end_date=2023-08-11 13:12:22.185181+00:00, run_duration=53.499576, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:10:54.682059+00:00, queued_by_job_id=2, pid=3108
+2023-08-11 06:12:37,784 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:12:38,093 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:12:38,399 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:12:47,557 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:12:47,861 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:12:48,165 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:12:31,844 INFO - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py
+2023-08-11 06:12:55,493 INFO - Running <TaskInstance: scrapy_spider.run_scrapy_spider manual__2023-08-11T13:08:30.743812+00:00 [queued]> on host VivoADMIN.
+2023-08-11 06:12:58,400 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:12:58,704 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:12:59,094 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:13:09,505 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:13:09,811 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:13:10,117 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:13:20,447 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:13:20,753 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:13:21,059 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:13:29,392 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:13:29,699 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:13:30,006 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:13:41,713 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:13:42,022 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:13:42,330 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:13:52,030 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:13:52,342 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:13:52,648 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:13:53,263 INFO - Marking run <DagRun scrapy_spider @ 2023-08-11 13:08:30.743812+00:00: manual__2023-08-11T13:08:30.743812+00:00, state:running, queued_at: 2023-08-11 13:08:34.082127+00:00. externally triggered: True> successful
+2023-08-11 06:13:53,265 INFO - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 13:08:30.743812+00:00, run_id=manual__2023-08-11T13:08:30.743812+00:00, run_start_date=2023-08-11 13:08:42.183447+00:00, run_end_date=2023-08-11 13:13:53.265562+00:00, run_duration=311.082115, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-08-11 12:50:00+00:00, data_interval_end=2023-08-11 13:00:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15
+2023-08-11 06:13:53,576 INFO - Setting next_dagrun for scrapy_spider to 2023-08-11T13:00:00+00:00, run_after=2023-08-11T13:10:00+00:00
+2023-08-11 06:13:56,934 INFO - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:10:00+00:00 [scheduled]>
+2023-08-11 06:13:56,936 INFO - DAG scrapy_spider has 0/16 running and queued tasks
+2023-08-11 06:13:56,937 INFO - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:10:00+00:00 [scheduled]>
+2023-08-11 06:13:57,091 INFO - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:10:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-08-11 06:13:57,093 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:13:57,247 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='manual__2023-08-11T13:08:30.743812+00:00', try_number=1, map_index=-1)
+2023-08-11 06:13:57,248 INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py']
+2023-08-11 06:13:57,856 INFO - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=manual__2023-08-11T13:08:30.743812+00:00, map_index=-1, run_start_date=2023-08-11 13:13:03.488860+00:00, run_end_date=2023-08-11 13:13:46.428649+00:00, run_duration=42.939789, state=success, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:12:30.198635+00:00, queued_by_job_id=2, pid=3183
+2023-08-11 06:14:03,306 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:14:03,611 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:14:03,992 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:14:11,918 ERROR - Execution date is in future: 2023-08-11 13:20:00+00:00
+2023-08-11 06:14:12,223 ERROR - Execution date is in future: 2023-08-11 13:30:00+00:00
+2023-08-11 06:14:12,528 ERROR - Execution date is in future: 2023-08-11 13:40:00+00:00
+2023-08-11 06:13:58,559 INFO - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py
+2023-08-11 06:14:22,929 INFO - Running <TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:10:00+00:00 [queued]> on host VivoADMIN.
+2023-08-11 06:14:51,350 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:15:19,106 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:10:00+00:00', try_number=1, map_index=-1)
+2023-08-11 06:15:19,716 INFO - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=scheduled__2023-08-11T13:10:00+00:00, map_index=-1, run_start_date=2023-08-11 13:14:30.861007+00:00, run_end_date=2023-08-11 13:15:12.213061+00:00, run_duration=41.352054, state=success, executor_state=success, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:13:56.939363+00:00, queued_by_job_id=2, pid=3265
+2023-08-11 06:15:41,849 INFO - Marking run <DagRun scrapy_spider @ 2023-08-11 13:10:00+00:00: scheduled__2023-08-11T13:10:00+00:00, state:running, queued_at: 2023-08-11 13:09:01.923508+00:00. externally triggered: False> successful
+2023-08-11 06:15:41,852 INFO - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 13:10:00+00:00, run_id=scheduled__2023-08-11T13:10:00+00:00, run_start_date=2023-08-11 13:09:03.447870+00:00, run_end_date=2023-08-11 13:15:41.851704+00:00, run_duration=398.403834, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-08-11 13:10:00+00:00, data_interval_end=2023-08-11 13:20:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15
+2023-08-11 06:19:54,089 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:24:57,097 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:30:00,587 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:35:05,739 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:40:10,150 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:45:13,411 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:50:18,582 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 06:55:21,671 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:00:24,177 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:05:27,416 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:10:28,933 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:15:33,471 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:20:35,763 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:25:38,752 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:30:40,310 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:35:43,935 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:40:48,436 INFO - Resetting orphaned tasks for active dag runs
+2023-08-11 07:43:14,852 INFO - Exiting gracefully upon receiving signal 15
+2023-08-11 07:43:15,944 INFO - Sending Signals.SIGTERM to group 2387. PIDs of all processes in the group: [2387]
+2023-08-11 07:43:15,945 INFO - Sending the signal Signals.SIGTERM to group 2387
+2023-08-11 07:43:16,350 INFO - Process psutil.Process(pid=2387, status='terminated', exitcode=0, started='05:54:31') (2387) terminated with exit code 0
+2023-08-11 07:43:16,353 INFO - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.
+2023-08-11 07:43:16,530 INFO - Sending Signals.SIGTERM to group 2387. PIDs of all processes in the group: []
+2023-08-11 07:43:16,531 INFO - Sending the signal Signals.SIGTERM to group 2387
+2023-08-11 07:43:16,532 INFO - Sending the signal Signals.SIGTERM to process 2387 as process group is missing.
+2023-08-11 07:43:16,533 INFO - Exited execute loop

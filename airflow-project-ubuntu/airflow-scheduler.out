@@ -1,0 +1,182 @@
+[[34m2023-08-11T05:54:31.896-0700[0m] {[34mscheduler_job_runner.py:[0m788} INFO[0m - Starting the scheduler[0m
+[[34m2023-08-11T05:54:31.898-0700[0m] {[34mscheduler_job_runner.py:[0m795} INFO[0m - Processing each file at most -1 times[0m
+[[34m2023-08-11T05:54:32.136-0700[0m] {[34mmanager.py:[0m165} INFO[0m - Launched DagFileProcessorManager with pid: 2387[0m
+[[34m2023-08-11T05:54:32.141-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T05:54:32.205-0700[0m] {[34msettings.py:[0m60} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[[34m2023-08-11T05:59:34.894-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:04:40.087-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:08:41.266-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:00:00+00:00, run_after=2023-08-11T13:10:00+00:00[0m
+[[34m2023-08-11T06:08:46.162-0700[0m] {[34mscheduler_job_runner.py:[0m411} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T12:50:00+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:08:46.164-0700[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG scrapy_spider has 0/16 running and queued tasks[0m
+[[34m2023-08-11T06:08:46.165-0700[0m] {[34mscheduler_job_runner.py:[0m587} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T12:50:00+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:08:46.323-0700[0m] {[34mscheduler_job_runner.py:[0m625} INFO[0m - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T12:50:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-08-11T06:08:46.325-0700[0m] {[34mbase_executor.py:[0m147} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T12:50:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:08:46.484-0700[0m] {[34mlocal_executor.py:[0m86} INFO[0m - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T12:50:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:08:49.993-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:10:00+00:00, run_after=2023-08-11T13:20:00+00:00[0m
+[[34m2023-08-11T06:09:02.384-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:20:00+00:00, run_after=2023-08-11T13:30:00+00:00[0m
+[[34m2023-08-11T06:09:04.507-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:10:00+00:00[0m
+[[34m2023-08-11T06:08:47.837-0700[0m] {[34mdagbag.py:[0m541} INFO[0m - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py[0m
+Changing /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/logs/dag_id=scrapy_spider/run_id=scheduled__2023-08-11T12:50:00+00:00/task_id=run_scrapy_spider permission to 509
+[[34m2023-08-11T06:09:13.836-0700[0m] {[34mtask_command.py:[0m410} INFO[0m - Running <TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T12:50:00+00:00 [queued]> on host VivoADMIN.[0m
+[[34m2023-08-11T06:09:15.041-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:30:00+00:00, run_after=2023-08-11T13:40:00+00:00[0m
+[[34m2023-08-11T06:09:17.166-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:10:00+00:00[0m
+[[34m2023-08-11T06:09:17.475-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:09:28.829-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:10:00+00:00[0m
+[[34m2023-08-11T06:09:29.141-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:09:38.871-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:40:00+00:00, run_after=2023-08-11T13:50:00+00:00[0m
+[[34m2023-08-11T06:09:41.005-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:10:00+00:00[0m
+[[34m2023-08-11T06:09:41.313-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:09:41.622-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:09:48.948-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:09:52.920-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:50:00+00:00, run_after=2023-08-11T14:00:00+00:00[0m
+[[34m2023-08-11T06:09:55.055-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:10:00+00:00[0m
+[[34m2023-08-11T06:09:55.362-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:09:55.669-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:09:55.977-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:10:08.716-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:10:09.021-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:10:09.327-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:10:21.687-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:10:21.994-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:10:22.303-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:10:35.067-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:10:35.372-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:10:35.678-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:10:47.658-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:10:47.965-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:10:48.271-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:10:48.882-0700[0m] {[34mdagrun.py:[0m630} INFO[0m - Marking run <DagRun scrapy_spider @ 2023-08-11 12:50:00+00:00: scheduled__2023-08-11T12:50:00+00:00, state:running, queued_at: 2023-08-11 13:08:40.797638+00:00. externally triggered: False> successful[0m
+[[34m2023-08-11T06:10:48.885-0700[0m] {[34mdagrun.py:[0m681} INFO[0m - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 12:50:00+00:00, run_id=scheduled__2023-08-11T12:50:00+00:00, run_start_date=2023-08-11 13:08:42.182739+00:00, run_end_date=2023-08-11 13:10:48.885171+00:00, run_duration=126.702432, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-08-11 12:50:00+00:00, data_interval_end=2023-08-11 13:00:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15[0m
+[[34m2023-08-11T06:10:49.193-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:00:00+00:00, run_after=2023-08-11T13:10:00+00:00[0m
+[[34m2023-08-11T06:10:54.675-0700[0m] {[34mscheduler_job_runner.py:[0m411} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:00:00+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:10:54.677-0700[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG scrapy_spider has 0/16 running and queued tasks[0m
+[[34m2023-08-11T06:10:54.679-0700[0m] {[34mscheduler_job_runner.py:[0m587} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:00:00+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:10:54.833-0700[0m] {[34mscheduler_job_runner.py:[0m625} INFO[0m - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-08-11T06:10:54.835-0700[0m] {[34mbase_executor.py:[0m147} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:10:54.990-0700[0m] {[34mscheduler_job_runner.py:[0m677} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T12:50:00+00:00', try_number=1, map_index=-1)[0m
+[[34m2023-08-11T06:10:54.990-0700[0m] {[34mlocal_executor.py:[0m86} INFO[0m - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:10:55.602-0700[0m] {[34mscheduler_job_runner.py:[0m713} INFO[0m - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=scheduled__2023-08-11T12:50:00+00:00, map_index=-1, run_start_date=2023-08-11 13:09:21.401904+00:00, run_end_date=2023-08-11 13:10:36.778685+00:00, run_duration=75.376781, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:08:46.167384+00:00, queued_by_job_id=2, pid=2995[0m
+[[34m2023-08-11T06:11:01.643-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:11:01.948-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:11:02.253-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:11:13.109-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:11:13.413-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:11:13.719-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:10:56.324-0700[0m] {[34mdagbag.py:[0m541} INFO[0m - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py[0m
+Changing /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/logs/dag_id=scrapy_spider/run_id=scheduled__2023-08-11T13:00:00+00:00/task_id=run_scrapy_spider permission to 509
+[[34m2023-08-11T06:11:20.809-0700[0m] {[34mtask_command.py:[0m410} INFO[0m - Running <TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:00:00+00:00 [queued]> on host VivoADMIN.[0m
+[[34m2023-08-11T06:11:26.422-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:11:26.728-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:11:27.033-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:11:37.865-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:11:38.171-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:11:38.478-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:11:49.978-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:11:50.286-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:11:50.595-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:12:01.500-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:12:01.806-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:12:02.113-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:12:13.629-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:12:13.939-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:12:14.247-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:12:24.227-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:12:24.533-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:12:24.843-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:12:25.456-0700[0m] {[34mdagrun.py:[0m630} INFO[0m - Marking run <DagRun scrapy_spider @ 2023-08-11 13:00:00+00:00: scheduled__2023-08-11T13:00:00+00:00, state:running, queued_at: 2023-08-11 13:08:49.522338+00:00. externally triggered: False> successful[0m
+[[34m2023-08-11T06:12:25.459-0700[0m] {[34mdagrun.py:[0m681} INFO[0m - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 13:00:00+00:00, run_id=scheduled__2023-08-11T13:00:00+00:00, run_start_date=2023-08-11 13:08:51.056620+00:00, run_end_date=2023-08-11 13:12:25.459062+00:00, run_duration=214.402442, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-08-11 13:00:00+00:00, data_interval_end=2023-08-11 13:10:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15[0m
+[[34m2023-08-11T06:12:25.768-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:10:00+00:00, run_after=2023-08-11T13:20:00+00:00[0m
+[[34m2023-08-11T06:12:30.192-0700[0m] {[34mscheduler_job_runner.py:[0m411} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider manual__2023-08-11T13:08:30.743812+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:12:30.194-0700[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG scrapy_spider has 0/16 running and queued tasks[0m
+[[34m2023-08-11T06:12:30.196-0700[0m] {[34mscheduler_job_runner.py:[0m587} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider manual__2023-08-11T13:08:30.743812+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:12:30.350-0700[0m] {[34mscheduler_job_runner.py:[0m625} INFO[0m - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='manual__2023-08-11T13:08:30.743812+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-08-11T06:12:30.352-0700[0m] {[34mbase_executor.py:[0m147} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'manual__2023-08-11T13:08:30.743812+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:12:30.508-0700[0m] {[34mscheduler_job_runner.py:[0m677} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:00:00+00:00', try_number=1, map_index=-1)[0m
+[[34m2023-08-11T06:12:30.508-0700[0m] {[34mlocal_executor.py:[0m86} INFO[0m - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'manual__2023-08-11T13:08:30.743812+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:12:31.118-0700[0m] {[34mscheduler_job_runner.py:[0m713} INFO[0m - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=scheduled__2023-08-11T13:00:00+00:00, map_index=-1, run_start_date=2023-08-11 13:11:28.685605+00:00, run_end_date=2023-08-11 13:12:22.185181+00:00, run_duration=53.499576, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:10:54.682059+00:00, queued_by_job_id=2, pid=3108[0m
+[[34m2023-08-11T06:12:37.784-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:12:38.093-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:12:38.399-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:12:47.557-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:12:47.861-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:12:48.165-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:12:31.844-0700[0m] {[34mdagbag.py:[0m541} INFO[0m - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py[0m
+Changing /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/logs/dag_id=scrapy_spider/run_id=manual__2023-08-11T13:08:30.743812+00:00/task_id=run_scrapy_spider permission to 509
+[[34m2023-08-11T06:12:55.493-0700[0m] {[34mtask_command.py:[0m410} INFO[0m - Running <TaskInstance: scrapy_spider.run_scrapy_spider manual__2023-08-11T13:08:30.743812+00:00 [queued]> on host VivoADMIN.[0m
+[[34m2023-08-11T06:12:58.400-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:12:58.704-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:12:59.094-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:13:09.505-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:13:09.811-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:13:10.117-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:13:20.447-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:13:20.753-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:13:21.059-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:13:29.392-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:13:29.699-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:13:30.006-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:13:41.713-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:13:42.022-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:13:42.330-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:13:52.030-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:13:52.342-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:13:52.648-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:13:53.263-0700[0m] {[34mdagrun.py:[0m630} INFO[0m - Marking run <DagRun scrapy_spider @ 2023-08-11 13:08:30.743812+00:00: manual__2023-08-11T13:08:30.743812+00:00, state:running, queued_at: 2023-08-11 13:08:34.082127+00:00. externally triggered: True> successful[0m
+[[34m2023-08-11T06:13:53.265-0700[0m] {[34mdagrun.py:[0m681} INFO[0m - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 13:08:30.743812+00:00, run_id=manual__2023-08-11T13:08:30.743812+00:00, run_start_date=2023-08-11 13:08:42.183447+00:00, run_end_date=2023-08-11 13:13:53.265562+00:00, run_duration=311.082115, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-08-11 12:50:00+00:00, data_interval_end=2023-08-11 13:00:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15[0m
+[[34m2023-08-11T06:13:53.576-0700[0m] {[34mdag.py:[0m3504} INFO[0m - Setting next_dagrun for scrapy_spider to 2023-08-11T13:00:00+00:00, run_after=2023-08-11T13:10:00+00:00[0m
+[[34m2023-08-11T06:13:56.934-0700[0m] {[34mscheduler_job_runner.py:[0m411} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:10:00+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:13:56.936-0700[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG scrapy_spider has 0/16 running and queued tasks[0m
+[[34m2023-08-11T06:13:56.937-0700[0m] {[34mscheduler_job_runner.py:[0m587} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:10:00+00:00 [scheduled]>[0m
+[[34m2023-08-11T06:13:57.091-0700[0m] {[34mscheduler_job_runner.py:[0m625} INFO[0m - Sending TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:10:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2023-08-11T06:13:57.093-0700[0m] {[34mbase_executor.py:[0m147} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:13:57.247-0700[0m] {[34mscheduler_job_runner.py:[0m677} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='manual__2023-08-11T13:08:30.743812+00:00', try_number=1, map_index=-1)[0m
+[[34m2023-08-11T06:13:57.248-0700[0m] {[34mlocal_executor.py:[0m86} INFO[0m - QueuedLocalWorker running ['airflow', 'tasks', 'run', 'scrapy_spider', 'run_scrapy_spider', 'scheduled__2023-08-11T13:10:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/scrapy-task.py'][0m
+[[34m2023-08-11T06:13:57.856-0700[0m] {[34mscheduler_job_runner.py:[0m713} INFO[0m - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=manual__2023-08-11T13:08:30.743812+00:00, map_index=-1, run_start_date=2023-08-11 13:13:03.488860+00:00, run_end_date=2023-08-11 13:13:46.428649+00:00, run_duration=42.939789, state=success, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:12:30.198635+00:00, queued_by_job_id=2, pid=3183[0m
+[[34m2023-08-11T06:14:03.306-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:14:03.611-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:14:03.992-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:14:11.918-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:20:00+00:00[0m
+[[34m2023-08-11T06:14:12.223-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:30:00+00:00[0m
+[[34m2023-08-11T06:14:12.528-0700[0m] {[34mscheduler_job_runner.py:[0m1420} ERROR[0m - Execution date is in future: 2023-08-11 13:40:00+00:00[0m
+[[34m2023-08-11T06:13:58.559-0700[0m] {[34mdagbag.py:[0m541} INFO[0m - Filling up the DagBag from /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/dags/scrapy-task.py[0m
+Changing /mnt/c/Users/38097/Desktop/DevOps Arhitecture/Airflow_plus_scrapy/airflow-project-ubuntu/logs/dag_id=scrapy_spider/run_id=scheduled__2023-08-11T13:10:00+00:00/task_id=run_scrapy_spider permission to 509
+[[34m2023-08-11T06:14:22.929-0700[0m] {[34mtask_command.py:[0m410} INFO[0m - Running <TaskInstance: scrapy_spider.run_scrapy_spider scheduled__2023-08-11T13:10:00+00:00 [queued]> on host VivoADMIN.[0m
+[[34m2023-08-11T06:14:51.350-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:15:19.106-0700[0m] {[34mscheduler_job_runner.py:[0m677} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='scrapy_spider', task_id='run_scrapy_spider', run_id='scheduled__2023-08-11T13:10:00+00:00', try_number=1, map_index=-1)[0m
+[[34m2023-08-11T06:15:19.716-0700[0m] {[34mscheduler_job_runner.py:[0m713} INFO[0m - TaskInstance Finished: dag_id=scrapy_spider, task_id=run_scrapy_spider, run_id=scheduled__2023-08-11T13:10:00+00:00, map_index=-1, run_start_date=2023-08-11 13:14:30.861007+00:00, run_end_date=2023-08-11 13:15:12.213061+00:00, run_duration=41.352054, state=success, executor_state=success, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2023-08-11 13:13:56.939363+00:00, queued_by_job_id=2, pid=3265[0m
+[[34m2023-08-11T06:15:41.849-0700[0m] {[34mdagrun.py:[0m630} INFO[0m - Marking run <DagRun scrapy_spider @ 2023-08-11 13:10:00+00:00: scheduled__2023-08-11T13:10:00+00:00, state:running, queued_at: 2023-08-11 13:09:01.923508+00:00. externally triggered: False> successful[0m
+[[34m2023-08-11T06:15:41.852-0700[0m] {[34mdagrun.py:[0m681} INFO[0m - DagRun Finished: dag_id=scrapy_spider, execution_date=2023-08-11 13:10:00+00:00, run_id=scheduled__2023-08-11T13:10:00+00:00, run_start_date=2023-08-11 13:09:03.447870+00:00, run_end_date=2023-08-11 13:15:41.851704+00:00, run_duration=398.403834, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-08-11 13:10:00+00:00, data_interval_end=2023-08-11 13:20:00+00:00, dag_hash=46858e0c6effdf192ae7bed4fb5b1c15[0m
+[[34m2023-08-11T06:19:54.089-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:24:57.097-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:30:00.587-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:35:05.739-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:40:10.150-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:45:13.411-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:50:18.582-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T06:55:21.671-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:00:24.177-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:05:27.416-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:10:28.933-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:15:33.471-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:20:35.763-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:25:38.752-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:30:40.310-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:35:43.935-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:40:48.436-0700[0m] {[34mscheduler_job_runner.py:[0m1553} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-08-11T07:43:14.852-0700[0m] {[34mscheduler_job_runner.py:[0m247} INFO[0m - Exiting gracefully upon receiving signal 15[0m
+[[34m2023-08-11T07:43:15.944-0700[0m] {[34mprocess_utils.py:[0m131} INFO[0m - Sending Signals.SIGTERM to group 2387. PIDs of all processes in the group: [2387][0m
+[[34m2023-08-11T07:43:15.945-0700[0m] {[34mprocess_utils.py:[0m86} INFO[0m - Sending the signal Signals.SIGTERM to group 2387[0m
+[[34m2023-08-11T07:43:16.350-0700[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=2387, status='terminated', exitcode=0, started='05:54:31') (2387) terminated with exit code 0[0m
+[[34m2023-08-11T07:43:16.353-0700[0m] {[34mlocal_executor.py:[0m400} INFO[0m - Shutting down LocalExecutor; waiting for running tasks to finish.  Signal again if you don't want to wait.[0m
+[[34m2023-08-11T07:43:16.530-0700[0m] {[34mprocess_utils.py:[0m131} INFO[0m - Sending Signals.SIGTERM to group 2387. PIDs of all processes in the group: [][0m
+[[34m2023-08-11T07:43:16.531-0700[0m] {[34mprocess_utils.py:[0m86} INFO[0m - Sending the signal Signals.SIGTERM to group 2387[0m
+[[34m2023-08-11T07:43:16.532-0700[0m] {[34mprocess_utils.py:[0m100} INFO[0m - Sending the signal Signals.SIGTERM to process 2387 as process group is missing.[0m
+[[34m2023-08-11T07:43:16.533-0700[0m] {[34mscheduler_job_runner.py:[0m864} INFO[0m - Exited execute loop[0m
