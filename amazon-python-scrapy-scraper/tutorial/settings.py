@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'tutorial.spiders'
 
 
 ## Add Your ScrapeOps API key
-SCRAPEOPS_API_KEY = '70e570f1-8a00-49b7-a4e7-9d7e896018ce' ## get free API key at https://scrapeops.io/app/register
+SCRAPEOPS_API_KEY = '' ## get free API key at https://scrapeops.io/app/register
 
 ## Add In The ScrapeOps Extension
 EXTENSIONS = {
